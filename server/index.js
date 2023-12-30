@@ -21,7 +21,10 @@ app.use(
   })
 );
 app.use(cors());
-
+// Allow specific origin(s)
+app.use(cors({
+  origin: 'https://bazar-56xg.vercel.app/'
+}));
 setupDB();
 require('./config/passport')(app);
 app.use(routes);
