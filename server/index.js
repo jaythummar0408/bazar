@@ -23,7 +23,9 @@ app.use(
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
-  origin: 'https://bazar-56xg-af6a7sb8m-jay-thummars-projects.vercel.app/'
+  origin: ['https://bazar-212r.vercel.app/'],
+  methods:["POST","GET","DELETE","PUT","PATCH"],
+  credentials:true
 }));
 setupDB();
 require('./config/passport')(app);
