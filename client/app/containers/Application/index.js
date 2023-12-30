@@ -80,7 +80,7 @@ class Application extends React.PureComponent {
         <main className='main'>
           <Container>
             <div className='wrapper'>
-              <Switch>
+              <Switch >
                 <Route exact path='/' component={HomePage} />
                 <Route path='/shop' component={Shop} />
                 <Route path='/sell' component={Sell} />

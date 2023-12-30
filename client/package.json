@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "homepage":"https://bazar-ftvo.vercel.app/",
   "version": "1.0.0",
   "description": "MERN Ecommerce Client",
   "scripts": {
