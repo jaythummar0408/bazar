@@ -23,7 +23,7 @@ app.use(
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
-  origin: ['https://bazar-212r.vercel.app/'],
+  origin: ['https://bazar-212r-rgi8umu28-jay-thummars-projects.vercel.app/'],
   methods:["POST","GET","DELETE","PUT","PATCH"],
   credentials:true
 }));
