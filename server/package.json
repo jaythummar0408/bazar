@@ -1,7 +1,5 @@
 {
   "name": "server",
-  "homepage": ".",
-
   "version": "1.0.0",
   "description": "MERN Ecommerce Server",
   "scripts": {
