@@ -1,6 +1,5 @@
 {
   "name": "client",
-  "homepage":"https://bazar-ftvo-lvnx0w5y0-jay-thummars-projects.vercel.app/",
   "version": "1.0.0",
   "description": "MERN Ecommerce Client",
   "scripts": {
