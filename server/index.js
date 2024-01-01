@@ -23,7 +23,7 @@ app.use(
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
-  origin: 'http://localhost:8080/',
+  origin: 'https://unrivaled-tapioca-5ca8fa.netlify.app/',
   methods:["POST","GET","DELETE","PUT","PATCH"],
   credentials:true
 }));
