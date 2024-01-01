@@ -22,11 +22,13 @@ app.use(
 );
 app.use(cors());
 // Allow specific origin(s)
-app.use(cors({
-  origin: '*',
-  methods: ["POST", "GET", "DELETE", "PUT", "PATCH"],
-  credentials: true
-}));
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 setupDB();
 require('./config/passport')(app);
