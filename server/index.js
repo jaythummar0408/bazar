@@ -23,7 +23,7 @@ app.use(
 app.use(cors());
 // Allow specific origin(s)
 app.use(cors({
-  origin: 'https://unrivaled-tapioca-5ca8fa.netlify.app/',
+  origin: 'https://6592ed79bae3c0dbd48ff491--meek-smakager-899c1f.netlify.app/',
   methods:["POST","GET","DELETE","PUT","PATCH"],
   credentials:true
 }));
