@@ -11,6 +11,14 @@ const setupDB = require('./utils/db');
 
 const { port } = keys;
 const app = express();
+const corsOptions = {
+  origin: 'https://meek-smakager-899c1f.netlify.app/', // Replace with your actual domain
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -20,15 +28,7 @@ app.use(
     frameguard: true
   })
 );
-app.use(cors());
-// Allow specific origin(s)
-app.use(function(req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  res.setHeader('Access-Control-Allow-Credentials', true);
-  next();
-});
+
 
 setupDB();
 require('./config/passport')(app);
