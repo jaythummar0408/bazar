@@ -12,7 +12,7 @@ const setupDB = require('./utils/db');
 const { port } = keys;
 const app = express();
 const corsOptions = {
-  origin: 'https://meek-smakager-899c1f.netlify.app/', // Replace with your actual domain
+  origin: 'https://659839084804832f24fabd6c--spontaneous-tarsier-06af80.netlify.app',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204
