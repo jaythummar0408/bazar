@@ -11,15 +11,16 @@ const setupDB = require('./utils/db');
 
 const { port } = keys;
 const app = express();
+
 const corsOptions = {
-  origin: 'https://659839084804832f24fabd6c--spontaneous-tarsier-06af80.netlify.app',
+  origin: 'https://lustrous-clafoutis-2932d3.netlify.app/',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204
 };
 
 app.use(cors(corsOptions));
-
+app.options('*', cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
